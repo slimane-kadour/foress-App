@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "foressApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Foress -  Notre mission vous simplifier la vie</title>
+
+     <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">    
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css">
+    <!-- Material CSS -->
+    <link rel="stylesheet" href="assets/css/material-kit.css" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+        <!-- Line Icons CSS -->
+    <link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css" type="text/css">
+    <!-- Line Icons CSS -->
+    <link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css" type="text/css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/extras/animate.css" type="text/css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/extras/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/extras/owl.theme.css" type="text/css">
+    <link rel="stylesheet" href="assets/extras/settings.css" type="text/css">
+    <!-- Responsive CSS Styles -->
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+        <!-- Bootstrap Select -->
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">  
+    
+  </head>
+
+  <body>  
+    <!-- Header Section Start -->
+    <div class="header">    
+      <nav class="navbar navbar-default main-navigation" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- Stat Toggle Nav Link For Mobiles -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- End Toggle Nav Link For Mobiles -->
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+          </div>
+          <!-- brand and toggle menu for mobile End -->
+
+          <!-- Navbar Start -->
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="login.html"><i class="lnr lnr-enter"></i> Connexion</a></li>
+              <li><a href="signup.html"><i class="lnr lnr-user"></i> Enregistrement</a></li>
+              <li class="postadd">
+                <a class="btn btn-danger btn-post" href="post-ads.html"><span class="fa fa-plus-circle"></span> Poster une annonce</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Navbar End -->
+        </div>
+      </nav>
+      <!-- Off Canvas Navigation -->
+      <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
+      <!--- Off Canvas Side Menu -->
+        <div class="close" data-toggle="offcanvas" data-target=".navmenu">
+            <i class="fa fa-close"></i>
+        </div>
+          <h3 class="title-menu">Toutes les pages</h3>
+          <ul class="nav navmenu-nav"> <!--- Menu -->
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À Propos</a></li>            
+            <li><a href="categorie.html">Catégorie</a></li>             
+            <li><a href="details.html">Détails</a></li>   
+            <li><a href="compte-archives.html">Les Archives</a></li>
+            <li><a href="compte-deconnexion.html">Déconnexion</a></li>
+            <li><a href="compte-favoris.html">Mes Favories</a></li>
+            <li><a href="compte-accueil.html">Compte Accueil</a></li>
+            <li><a href="compte-mes-annonces.html">Mes Annonces</a></li>
+            <li><a href="recherche-enregistre.html">Mes Recherches Enregistré</a></li> 
+            <li><a href="ajouter-annonce.html">Poster une annonce</a></li> 
+            <li><a href="annonce-ajouter.html">Annonce Ajouter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mdp-oublier.html">Mot de passe oublier</a></li>
+            <li><a href="faq.html">Faq</a></li>
+            <li><a href="enregistrement.html">Enregistrement</a></li>
+        </ul><!--- End Menu -->
+      </div> <!--- End Off Canvas Side Menu -->
+      <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
+        <p><i class="fa fa-file-text-o"></i> Toutes les pages</p>
+      </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Start Content -->
+    <div id="content">
+      <div class="container">
+        <div class="row">
+          <!-- Product Info Start -->
+          <div class="product-info">
+              // la partie de details pour items
+              
+            <div class="col-sm-8" ng-controller="itemDetailController">
+              <div class="inner-box ads-details-wrapper" >
+                <h2>{{item.titre}} </h2>
+                <p class="item-intro"><span class="poster">For sale by <span class="ui-bubble is-member">{{item.nom_annonceur}}</span> <span class="date"> {{item.date_parution}}</span> from <span class="location">{{item.adresse}}</span> </p>
+                <div id="owl-demo" class="owl-carousel owl-theme" style="opacity:1; display:block;">
+                    <div class="owl-wrapper-outer">
+                        <div class="owl-wrapper" style="width:4128px; left: 0px; display: block;">
+                    <div class="owl-item" style="width:688px;">
+                    <div class="item">
+                     <a href="details.html">
+                                    <img class="media-object "
+                                    ng-src={{item.image}} alt="Foress">
+                                    </a>
+                    </div>
+                  </div>
+                 <div class="owl-item" style="width:688px;">
+                    <div class="item">
+                      <img src="assets/img/productinfo/img2.jpg" alt="">
+                    </div>
+                            </div>
+                            <div class="owl-item" style="width:688px;">
+                    <div class="item">
+                      <img src="assets/img/productinfo/img3.jpg" alt="">
+                    </div>
+                            </div>
+                </div>
+            </div>
+                    </div>
+              </div>
+
+              <div class="box">
+                <h2 class="title-2"><strong>Ad detail</strong></h2>
+                  <div class="row">
+                  <div class="ads-details-info col-md-8">
+                    <p class="mb15">{{item.description}}</p>
+                    <ul class="list-circle">
+                      <li><i class="fa fa-check-circle"></i> 256GB PCIe flash storage</li>
+                      <li><i class="fa fa-check-circle"></i> 2.7 GHz dual-core Intel Core i5 processor</li>
+                      <li><i class="fa fa-check-circle"></i> Turbo Boost up to 3.1GHz</li>
+                      <li><i class="fa fa-check-circle"></i> Intel Iris Graphics 6100</li>
+                      <li><i class="fa fa-check-circle"></i> 8GB memory (up from 4GB in 2013 model)</li>
+                      <li><i class="fa fa-check-circle"></i> 10 hour battery life</li>
+                      <li><i class="fa fa-check-circle"></i> 13.3" Retina Display</li>
+                      <li><i class="fa fa-check-circle"></i> Intect Box</li>
+                      <li><i class="fa fa-check-circle"></i> 1 Year international warranty</li>
+                      </ul>
+                  </div>
+                      
+                  <div class="col-md-4">
+                    <aside class="panel panel-body panel-details">
+                      <ul>
+                        <li>
+                        <p class=" no-margin "><strong>Price:</strong> {{item.prix | currency}}</p>
+                        </li>
+                        <li>
+                        <p class="no-margin"><strong>Type:</strong> <a href="#">{{item.categorie}}</a>, <a href="#">For sale</a></p>
+                        </li>
+                        <li>
+                        <p class="no-margin"><strong>Location:</strong> <a href="#">{{item.adresse}}</a></p>
+                        </li>
+                        <li>
+                        <p class=" no-margin "><strong>Condition:</strong> {{item.label}}</p>
+                        </li>
+                        <li>
+                        <p class="no-margin"><strong>Brand:</strong> <a href="#">{{item.marque}} </a></p>
+                        </li>
+                      </ul>
+                    </aside>
+
+                    <div class="ads-action">
+                      <ul class="list-border">
+                        <li>
+                          <a href="#"> <i class=" fa fa-phone"></i> {{item.telephone}} </a></li>
+                        <li>
+                        <li>
+                          <a href="#">Posted by <i class=" fa fa-user"></i> {{item.nom_annonceur}}</a></li>
+                        <li>
+                          <a href="#"> <i class=" fa fa-heart"></i> Save ad</a></li>
+                        <li>
+                          <a href="#"> <i class="fa fa-share-alt"></i> Share </a>
+                      <div class="social-link">  
+                      <a class="twitter" target="_blank" data-original-title="twitter" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-twitter"></i></a>
+                      <a class="facebook" target="_blank" data-original-title="facebook" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-facebook"></i></a>
+                      <a class="google" target="_blank" data-original-title="google-plus" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-google"></i></a>
+                      <a class="linkedin" target="_blank" data-original-title="linkedin" href="#" data-toggle="tooltip" data-placement="top"><i class="fa fa-linkedin"></i></a>
+                      </div>
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              // fin de la partie detais pour item
+              
+              
+            <div class="col-sm-4">
+              <div class="inner-box">
+                <div class="widget-title">
+                  <h4>Advertisement</h4>
+                </div>
+                <img src="assets/img/img1.jpg" alt="">
+              </div>
+            <div class="col-xs-12">
+              <div class="features-box wow fadeInDownQuick" data-wow-delay="0.3s">
+                <div class="features-icon">
+                  <i class="lnr lnr-star">
+                  </i>
+                </div>
+                <div class="features-content">
+                  <h4>
+                    Fraud Protection
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="features-box wow fadeInDownQuick" data-wow-delay="0.6s">
+                <div class="features-icon">
+                  <i class="lnr lnr-chart-bars"></i>
+                </div>
+                <div class="features-content">
+                  <h4>
+                    No Extra Fees 
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="features-box wow fadeInDownQuick" data-wow-delay="0.9s">
+                <div class="features-icon">
+                  <i class="lnr lnr-spell-check"></i>
+                </div>
+                <div class="features-content">
+                  <h4>
+                    Verified Data
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere. 
+                  </p>
+                </div>
+              </div>
+               </div>
+            <div class="col-xs-12">
+              <div class="features-box wow fadeInDownQuick" data-wow-delay="0.9s">
+                <div class="features-icon">
+                  <i class="lnr lnr-smile"></i>
+                </div>
+                <div class="features-content">
+                  <h4>
+                    Friendly Return Policy
+                  </h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda facere. 
+                  </p>
+                </div>
+              </div>
+               </div>
+
+            </div>
+          </div>
+      </div>         
+    </div>
+
+    <!-- End Content -->
+
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Footer Area Start -->
+      <section class="footer-Content">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+              <div class="widget">
+                <h3 class="block-title">à propos de <span style="color:#3188c2;">foress</span></h3>
+                <div class="textwidget">
+                  <p>Lancé en 2017, l'idée était d'offrir aux gens une opportunité qui va leur faciliter la façon dont ils vendent, achètent et échangent des articles, des véhicules, des services, de l'immobilier ou du travail.</p>
+                </div>
+              </div>
+            </div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+    						<h3 class="block-title">Liens Utiles</h3>
+  							<ul class="menu">
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="Apropos.html">À Propos</a></li>
+                  <li><a href="connexion.html">Connexion</a></li>
+                  <li><a href="categorie.html">Catégories</a></li>
+                  <li><a href="inscription.html">Inscription</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+    					</div>
+    				</div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+                <h3 class="block-title">DERNIERS TWEETS</h3>
+                <div class="twitter-content clearfix">
+                  <ul class="twitter-list">
+                    <li class="clearfix">
+                      <span>
+                        Suivez nous sur le nouveau site d'annonce FORESS
+                        <a href="#">http://t.co/cLo2w7rWOx</a>
+                      </span>
+                    </li>
+                    <li class="clearfix">
+                      <span>
+                        Cherchez, Trouvez !
+                        <a href="#">http://t.co/cLo2w7rWOx</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+    						<h3 class="block-title">récemment ajoutés</h3>
+                <ul class="featured-list">
+                  <li>
+                    <img alt="" src="assets/img/featured/img1.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img2.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img3.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img4.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img5.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img6.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                </ul> 						
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- Footer area End -->
+    	
+    	<!-- Copyright Start  -->
+    	<div id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">    					
+              <div class="bottom-social-icons social-icon pull-right">  
+                <a class="facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a> 
+                <a class="twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+                <a class="dribble" target="_blank" href=""><i class="fa fa-dribbble"></i></a>
+                <a class="flickr" target="_blank" href=""><i class="fa fa-flickr"></i></a>
+                <a class="youtube" target="_blank" href=""><i class="fa fa-youtube"></i></a>
+                <a class="google-plus" target="_blank" href=""><i class="fa fa-google-plus"></i></a>
+                <a class="linkedin" target="_blank" href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+      <!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a> 
+      
+    <!-- Main JS  -->
+       <script src="../bower_components/angular/angular.min.js"></script>
+    
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>      
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/material.min.js"></script>
+    <script type="text/javascript" src="assets/js/material-kit.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-select.min.js"></script>
+      <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "foressApp">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Foress -  Notre mission vous simplifier la vie </title>    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">    
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css">    
+    <link rel="stylesheet" href="assets/css/jasny-bootstrap.min.css" type="text/css">
+    <!-- Material CSS -->
+    <link rel="stylesheet" href="assets/css/material-kit.css" type="text/css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+        <!-- Line Icons CSS -->
+    <link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css" type="text/css">
+        <!-- Line Icons CSS -->
+    <link rel="stylesheet" href="assets/fonts/line-icons/line-icons.css" type="text/css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/extras/animate.css" type="text/css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/extras/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/extras/owl.theme.css" type="text/css">    
+    <!-- Responsive CSS Styles -->
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+    <!-- Slicknav js -->
+    <link rel="stylesheet" href="assets/css/slicknav.css" type="text/css">
+        <!-- Bootstrap Select -->
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    
+  </head>
+
+  <body>  
+    <!-- Header Section Start -->
+    <div class="header">    
+      <nav class="navbar navbar-default main-navigation" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- Stat Toggle Nav Link For Mobiles -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- End Toggle Nav Link For Mobiles -->
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/Capture.PNG" alt=""></a>
+          </div>
+          <!-- brand and toggle menu for mobile End -->
+
+          <!-- Navbar Start -->
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="connexion.html"><i class="lnr lnr-enter"></i> Connexion</a></li>
+              <li><a href="inscription.html"><i class="lnr lnr-user"></i> Inscription</a></li>
+              <li class="postadd">
+                <a class="btn btn-danger btn-post" href="ajouter-annonce.html"><span class="fa fa-plus-circle"></span> Poster une Annonce</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Navbar End -->
+        </div>
+      </nav>
+        
+       
+       
+
+      <!-- Off Canvas Navigation -->
+      <div class="navmenu navmenu-default navmenu-fixed-left offcanvas"> 
+      <!--- Off Canvas Side Menu -->
+        <div class="close" data-toggle="offcanvas" data-target=".navmenu">
+            <i class="fa fa-close"></i>
+        </div>
+          <h3 class="title-menu">Toutes les pages</h3>
+          <ul class="nav navmenu-nav"> <!--- Menu -->
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À Propos</a></li>            
+            <li><a href="categorie.html">Catégorie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">Faq</a></li>
+        </ul><!--- End Menu -->
+      </div> <!--- End Off Canvas Side Menu -->
+      <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
+        <p><i class="fa fa-file-text-o"></i> Toutes les pages</p>
+      </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Start intro section -->
+    <section id="intro" class="section-intro">
+      <div class="overlay">
+        <div class="container">
+          <div class="main-text">
+            <h1 class="intro-title">Bienvenue à <span style="color: #3498DB">Foress</span></h1>
+            <p class="sub-title">Notre mission vous simplifier la vie </p>
+
+            <!-- Start Search box -->
+            <div class="row search-bar">
+              <div class="advanced-search">
+                <form class="search-form" method="get">
+                  <div class="col-md-3 col-sm-6 search-col">
+                    <div class="input-group-addon search-category-container">
+                      <label class="styled-select">
+                        <select class="dropdown-product selectpicker" name="product-cat" >
+                          <option value="0">Toutes les catégories</option>
+                          <option value="">Communauté</option> 
+                          <option value="">Emplois</option>
+                          <option value=""> Immobiliers</option>
+                          <option value=""> Véhicules</option>
+                          <option value=""> Boutiques</option>
+                          <option value="">Électroménagers</option>
+                          <option value="">Services</option>
+                          <option value="">Matériels Informatiques</option>
+                          <option value="">Voyages</option>
+                          <option value="">Animaux</option>
+                       </select>                                    
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 search-col">
+                    <div class="input-group-addon search-category-container">
+                      <label class="styled-select location-select">
+                        <select class="dropdown-product selectpicker" name="product-cat" >
+                          <option value="0">Wilaya</option>
+                          <option value="Alger">Alger</option>
+                          <option value="Oran">Oran</option>
+                          <option value="Blida">Blida</option>
+                          <option value="Adrar">Adrar</option>
+                          <option value="Batna">Batna</option>
+                          <option value="Biskra">Biskra</option>
+                        </select>                                    
+                      </label>
+                    </div>
+
+
+                  </div>
+                  <div class="col-md-3 col-sm-6 search-col">
+                    <input class="form-control keyword" name="keyword" value="" placeholder="Mots clés" type="text">
+                    <i class="fa fa-search"></i>
+                  </div>
+                  <div class="col-md-3 col-sm-6 search-col">
+                    <button class="btn btn-common btn-search btn-block"><strong>Recherche</strong></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Search box -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end intro section -->
+
+  
+      
+      <!-- Categories Homepage Section End -->
+
+        <section id="categories-homepage">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="section-title">Parcourir toutes les catégories</h3>
+            </div> 
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-1 wow fadeInUpQuick" data-wow-delay="0.3s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-users color-1"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Communauté</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Bénévoles</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Événements</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Amis perdus</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Amitié</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-2 wow fadeInUpQuick" data-wow-delay="0.6s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-briefcase color-2"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Emplois</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html" style="color:#ff5353;text-decoration:underline;">Demandes / Offres :</a>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Informatique</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Comptabilité - Audit</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Commerce - Vente</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Santé - Pharmacie</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Hôtellerie - Restauration</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-3 wow fadeInUpQuick" data-wow-delay="0.9s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-apartment color-3"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Immobiliers</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html" style="color:#1dd2af;text-decoration:underline;">Achat :</a>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Appartement</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Terrain</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                    <li>
+                      <a href="categorie.html"  style="color:#1dd2af;text-decoration:underline;">Location :</a>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Espace commerciaux, bureaux</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-4 wow fadeInUpQuick" data-wow-delay="1.2s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-car color-4"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Véhicules</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Automobiles</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Motos - Scooters</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Bateaux</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Remorques</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Camions</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Pièces détachées</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-5 wow fadeInUpQuick" data-wow-delay="1.4s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-cart color-5"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Boutiques</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Téléphones</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Appareils Photo</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Bijoux - Montres</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Meubles de maison</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Articles de sport</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-6 wow fadeInUpQuick" data-wow-delay="1.8s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-coffee-cup color-6"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Électroménagers</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Réfrigérateur - Congélateur</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Cuisinière</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Machine à laver</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Fours - Micro onde</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Mixeurs - Batteurs</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>                      
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-7 wow fadeInUpQuick" data-wow-delay="2.1s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-cog color-7"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Services</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Ecole et formation</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                      <li>
+                      <a href="categorie.html">Construction et travaux</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Réparation Éléctroniques </a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Traiteurs et gateaux</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Transport</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Esthétique et beauté</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-8 wow fadeInUpQuick" data-wow-delay="2.4s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-laptop-phone color-8"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Matériels informatiques</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Périphériques et accessoires</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Stockage</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Ordinateurs</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Imprimantes</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Son</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>   
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div ></div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-9 wow fadeInUpQuick" data-wow-delay="2.4s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-rocket color-9"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Voyages</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Hadj et Omra</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Voyage organisé</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Réservation et visa</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Location de vacances</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> 
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-10 wow fadeInUpQuick" data-wow-delay="2.5s">
+                <div class="icon">
+                  <a href="categorie.html"><i class="lnr lnr-paw color-10"></i></a>
+                </div>
+                <div class="category-header">  
+                  <a href="categorie.html"><h4>Animaux</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul>
+                    <li>
+                      <a href="categorie.html">Oiseaux à adopter</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Chats, chatons à adopter</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Chiens à adopter</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Animaux de ferme</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Accessoires</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                     <li>
+                      <a href="categorie.html">Services pour animaux</a>
+                      <sapn class="category-counter">3</sapn>
+                    </li>
+                    <li>
+                      <a href="categorie.html">Autres →</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        
+        
+      <!-- Featured Listings Start -->
+      <section class="featured-lis" >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 wow fadeIn" data-wow-delay="0.5s">
+              <h3 class="section-title">Annonces les plus visités</h3>
+              <div id="new-products" class="owl-carousel">
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img1.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>    
+                    <a href="details.html" class="item-name">dsf graftr gtoure</a>  
+                    <span class="price">$150</span>  
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img2.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div> 
+                    <a href="details.html" class="item-name">Sed diam nonummy</a>  
+                    <span class="price">$67</span> 
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img3.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>
+                    <a href="details.html" class="item-name">Feugiat nulla facilisis</a>  
+                    <span class="price">$300</span>  
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img4.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div> 
+                    <a href="details.html" class="item-name">Lorem ipsum dolor sit</a>  
+                    <span class="price">$149</span> 
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img5.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>
+                    <a href="details.html" class="item-name">Sed diam nonummy</a>  
+                    <span class="price">$90</span> 
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img6.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>                     
+                    <a href="details.html" class="item-name">Praesent luptatum zzril</a>  
+                    <span class="price">$169</span> 
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img7.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>  
+                    <a href="details.html" class="item-name">Lorem ipsum dolor sit</a>  
+                    <span class="price">$79</span> 
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img src="assets/img/product/img8.jpg" alt=""> 
+                      <div class="overlay">
+                        <a href="details.html"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>
+                    <a href="details.html" class="item-name">Sed diam nonummy</a>  
+                    <span class="price">$149</span>   
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </section>
+      <!-- Featured Listings End -->
+           
+       
+
+    <!-- Counter Section Start -->
+    <section id="counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting wow fadeInDownQuick" data-wow-delay=".5s">
+              <div class="icon">
+                <span>
+                  <i class="lnr lnr-tag"></i>
+                </span>
+              </div>
+              <div class="desc">
+                <h3 class="counter">12090</h3>
+                <p>Regular Ads</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting wow fadeInDownQuick" data-wow-delay="1s">
+              <div class="icon">
+                <span>
+                  <i class="lnr lnr-map"></i>
+                </span>
+              </div>
+              <div class="desc">
+                <h3 class="counter">350</h3>
+                <p>Locations</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting wow fadeInDownQuick" data-wow-delay="1.5s">
+              <div class="icon">
+                <span>
+                  <i class="lnr lnr-users"></i>
+                </span>
+              </div>
+              <div class="desc">
+                <h3 class="counter">23453</h3>
+                <p>Nombre de visiteurs</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="counting wow fadeInDownQuick" data-wow-delay="2s">
+              <div class="icon">
+                <span>
+                  <i class="lnr lnr-license"></i>
+                </span>
+              </div>
+              <div class="desc">
+                <h3 class="counter">150</h3>
+                <p>Premium Ads</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Counter Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+    	<!-- Footer Area Start -->
+    	<section class="footer-Content">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+              <div class="widget">
+                <h3 class="block-title">à propos de <span style="color:#3188c2;">foress</span></h3>
+                <div class="textwidget">
+                  <p>Lancé en 2017, l'idée était d'offrir aux gens une opportunité qui va leur faciliter la façon dont ils vendent, achètent et échangent des articles, des véhicules, des services, de l'immobilier ou du travail.</p>
+                </div>
+              </div>
+            </div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+    						<h3 class="block-title">Liens Utiles</h3>
+  							<ul class="menu">
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="Apropos.html">À Propos</a></li>
+                  <li><a href="connexion.html">Connexion</a></li>
+                  <li><a href="categorie.html">Catégories</a></li>
+                  <li><a href="inscription.html">Inscription</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+    					</div>
+    				</div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+                <h3 class="block-title">DERNIERS TWEETS</h3>
+                <div class="twitter-content clearfix">
+                  <ul class="twitter-list">
+                    <li class="clearfix">
+                      <span>
+                        Suivez nous sur le nouveau site d'annonce FORESS
+                        <a href="#">http://t.co/cLo2w7rWOx</a>
+                      </span>
+                    </li>
+                    <li class="clearfix">
+                      <span>
+                        Cherchez, Trouvez !
+                        <a href="#">http://t.co/cLo2w7rWOx</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+    						<h3 class="block-title">récemment ajoutés</h3>
+                <ul class="featured-list">
+                  <li>
+                    <img alt="" src="assets/img/featured/img1.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img2.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img3.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img4.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img5.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img6.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                </ul> 						
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- Footer area End -->
+    	
+    	<!-- Copyright Start  -->
+    	<div id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">    					
+              <div class="bottom-social-icons social-icon pull-right">  
+                <a class="facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a> 
+                <a class="twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+                <a class="dribble" target="_blank" href=""><i class="fa fa-dribbble"></i></a>
+                <a class="flickr" target="_blank" href=""><i class="fa fa-flickr"></i></a>
+                <a class="youtube" target="_blank" href=""><i class="fa fa-youtube"></i></a>
+                <a class="google-plus" target="_blank" href=""><i class="fa fa-google-plus"></i></a>
+                <a class="linkedin" target="_blank" href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End -->  
+    
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+      
+    <!-- Main JS  -->
+   <script src="../bower_components/angular/angular.min.js"></script>
+    
+    <script type="text/javascript" src="assets/js/jquery-min.js"></script>      
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/material.min.js"></script>
+    <script type="text/javascript" src="assets/js/material-kit.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/wow.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-select.min.js"></script>
+      <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    
+
+    
+  </body>
+</html>

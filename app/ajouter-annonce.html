@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Foress -  Notre mission vous simplifier la vie </title>
+  <link href="assets/img/favicon.png" rel="shortcut icon"><!-- Bootstrap CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Material CSS -->
+  <link href="assets/css/material-kit.css" rel="stylesheet" type="text/css"><!-- Font Awesome CSS -->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- Line Icons CSS -->
+  <link href="assets/fonts/line-icons/line-icons.css" rel="stylesheet" type="text/css"><!-- Line Icons CSS -->
+  <link href="assets/fonts/line-icons/line-icons.css" rel="stylesheet" type="text/css"><!-- Main Styles -->
+  <link href="assets/css/main.css" rel="stylesheet" type="text/css"><!-- Animate CSS -->
+  <link href="assets/extras/animate.css" rel="stylesheet" type="text/css"><!-- Owl Carousel -->
+  <link href="assets/extras/owl.carousel.css" rel="stylesheet" type="text/css">
+  <link href="assets/extras/owl.theme.css" rel="stylesheet" type="text/css">
+  <link href="assets/extras/settings.css" rel="stylesheet" type="text/css"><!-- Responsive CSS Styles -->
+  <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"><!-- Bootstrap Select -->
+  <link href="assets/css/bootstrap-select.min.css" rel="stylesheet"><!-- File Input -->
+</head>
+<body data-ng-controller="poste-controller">
+  <!-- Header Section Start -->
+  <div class="header">
+    <nav class="navbar navbar-default main-navigation" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Stat Toggle Nav Link For Mobiles -->
+           <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <!-- End Toggle Nav Link For Mobiles -->
+           <a class="navbar-brand logo" href="index.html"><img alt="" src="assets/img/logo.png"></a>
+        </div><!-- brand and toggle menu for mobile End -->
+        <!-- Navbar Start -->
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="connexion.html"><i class="lnr lnr-enter"></i> Connexion</a>
+            </li>
+            <li>
+              <a href="inscription.html"><i class="lnr lnr-user"></i> Inscription</a>
+            </li>
+            <li class="postadd">
+              <a class="btn btn-danger btn-post" href="ajouter-annonce.html"><span class="fa fa-plus-circle"></span> Poster une annonce</a>
+            </li>
+          </ul>
+        </div><!-- Navbar End -->
+      </div>
+    </nav><!-- Off Canvas Navigation -->
+    <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+      <!--- Off Canvas Side Menu -->
+      <div class="close" data-target=".navmenu" data-toggle="offcanvas">
+        <i class="fa fa-close"></i>
+      </div>
+      <h3 class="title-menu">Toutes les pages</h3>
+          <ul class="nav navmenu-nav"> <!--- Menu -->
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À Propos</a></li>
+            <li><a href="categorie.html">Catégorie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">Faq</a></li>
+        </ul><!--- End Menu -->
+      </div> <!--- End Off Canvas Side Menu -->
+      <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
+        <p><i class="fa fa-file-text-o"></i> Toutes les pages</p>
+  </div><!-- Header Section End -->
+  <!-- Content section Start -->
+  <section id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+          <div class="page-ads box">
+            <h2 class="title-2">Poster une annonce</h2><!-- Start Search box -->
+            <div class="row search-bar mb30 red-bg">
+              <div class="advanced-search">
+                <form class="search-form" method="get">
+                  <div class="col-md-4 col-sm-12 search-col">
+                    <div class="input-group-addon search-category-container">
+
+                        <select placeholder="choisi votre categorie"  class="form-control" ng-model="form.template"
+                        ng-options="template.value as template.name for template in templates"></select>
+                 </div>
+                  </div>
+                 <div class="col-md-4 col-sm-12 search-col">
+                    <div class="input-group-addon search-category-container">
+                      <label class="styled-select default-select"><span class="hidden-sm hidden-xs">
+                      </span><select class="dropdown-product selectpicker" name="product-cat">
+                         <option value="0">
+                          Type
+                        </option>
+                        <option value="">
+                          Vente
+                        </option>
+                        <option value="">
+                          Achat
+                        </option>
+                      </select></label>
+                    </div>
+                  </div>
+                     <div class="col-md-4 col-sm-12 search-col">
+                    <div class="input-group-addon search-category-container">
+                      <label class="styled-select location-select"><span class="hidden-sm hidden-xs"> </span><select class="dropdown-product selectpicker" name="product-cat">
+                        <option value="0">
+                          Wilaya
+                        </option>
+                        <option value="">
+                          Oran
+                        </option>
+                        <option value="">
+                          Alger
+                        </option>
+                        <option value="">
+                          Tlemcen
+                        </option>
+                        <option value="">
+                          Adrar
+                        </option>
+                      </select></label>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div><!-- End Search box -->
+            <form class="form-ad">
+              <div class="form-group mb30">
+                <label class="control-label">Titre de l'annonce</label> <input class="form-control input-md" name="Adtitle" placeholder="Écrivez un titre approprié pour votre annonce" required="" type="text"> <span class="help-block">Un titre nécessite au moins 60 caractères.</span>
+              </div>
+            </form>
+            <div class="content" ng-if="form.template">
+             <div data-ng-include="'templates/' + form.template + '.html'"></div>
+            </div>
+          </div>
+          <div class="mb30"></div>
+          <div class="box">
+          <h2 class="title-2">Coordonnées</h2>
+          <div class="form-group">
+            <label class="control-label" for="textarea">Nom</label> <input class="form-control" placeholder="Votre Nom" type="text">
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="textarea">E-mail</label> <input class="form-control" placeholder="Votre E-mail" type="text">
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="textarea">Numéro de téléphone</label> <input class="form-control" placeholder="Votre numéro de téléphone" type="text">
+            <div class="checkbox">
+              <label><input type="checkbox"> <small>Masquer le numéro de téléphone sur cette annonce.</small></label>
+            </div>
+            </div>
+          </div>
+          <div class="mb30"></div>
+          <div class="form-group">
+            <div class="page-ads box">
+              <div class="checkbox">
+                <label><input type="checkbox"> En affichant cette annonce, vous acceptez nos <a href="">Conditions d’utilisation</a></label>
+              </div><br>
+              <button class="btn btn-common" type="button">Poster</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- Content section End -->
+
+  <!-- Footer Section Start -->
+  <footer>
+    	<!-- Footer Area Start -->
+    	<section class="footer-Content">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+              <div class="widget">
+                <h3 class="block-title">à propos de <span style="color:#3188c2;">foress</span></h3>
+                <div class="textwidget">
+                  <p>Lancé en 2017, l'idée était d'offrir aux gens une opportunité qui va leur faciliter la façon dont ils vendent, achètent et échangent des articles, des véhicules, des services, de l'immobilier ou du travail.</p>
+                </div>
+              </div>
+            </div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+    						<h3 class="block-title">Liens Utiles</h3>
+  							<ul class="menu">
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="Apropos.html">À Propos</a></li>
+                  <li><a href="connexion.html">Connexion</a></li>
+                  <li><a href="categorie.html">Catégories</a></li>
+                  <li><a href="inscription.html">Inscription</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                </ul>
+    					</div>
+    				</div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+                <h3 class="block-title">DERNIERS TWEETS</h3>
+                <div class="twitter-content clearfix">
+                  <ul class="twitter-list">
+                    <li class="clearfix">
+                      <span>
+                        Suivez nous sur le nouveau site d'annonce FORESS
+                        <a href="#">http://t.co/cLo2w7rWOx</a>
+                      </span>
+                    </li>
+                    <li class="clearfix">
+                      <span>
+                        Cherchez, Trouvez !
+                        <a href="#">http://t.co/cLo2w7rWOx</a>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn">
+    					<div class="widget">
+    						<h3 class="block-title">récemment ajoutés</h3>
+                <ul class="featured-list">
+                  <li>
+                    <img alt="" src="assets/img/featured/img1.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img2.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img3.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img4.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img5.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                  <li>
+                    <img alt="" src="assets/img/featured/img6.jpg">
+                    <div class="hover">
+                      <a href="#"><span>$49</span></a>
+                    </div>
+                  </li>
+                </ul>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- Footer area End -->
+
+    	<!-- Copyright Start  -->
+    	<div id="copyright">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+              <div class="bottom-social-icons social-icon pull-right">
+                <a class="facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a>
+                <a class="twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+                <a class="dribble" target="_blank" href=""><i class="fa fa-dribbble"></i></a>
+                <a class="flickr" target="_blank" href=""><i class="fa fa-flickr"></i></a>
+                <a class="youtube" target="_blank" href=""><i class="fa fa-youtube"></i></a>
+                <a class="google-plus" target="_blank" href=""><i class="fa fa-google-plus"></i></a>
+                <a class="linkedin" target="_blank" href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+<!-- Main JS  -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+  </script>
+  <script src="assets/js/jquery-min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/material.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/material-kit.js" type="text/javascript">
+  </script>
+  <script src="assets/js/jquery.parallax.js" type="text/javascript">
+  </script>
+  <script src="assets/js/owl.carousel.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/wow.js" type="text/javascript">
+  </script>
+  <script src="assets/js/main.js" type="text/javascript">
+  </script>
+  <script src="assets/js/jquery.counterup.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/waypoints.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/jasny-bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/form-validator.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/contact-form-script.js" type="text/javascript">
+  </script>
+  <script src="assets/js/jquery.themepunch.revolution.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/jquery.themepunch.tools.min.js" type="text/javascript">
+  </script>
+  <script src="assets/js/bootstrap-select.min.js">
+  </script>
+  <script src="assets/js/fileinput.js">
+  </script>
+  <script src="assets/js/form-annonce.js"></script>
+</body>
+</html>
